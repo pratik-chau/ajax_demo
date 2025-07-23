@@ -8,17 +8,23 @@
 <body>
   <h1>AJAX / fetch demo</h1>
 
-  <form id="greet-form">
-    <label>
-      Your name:
-      <input type="text" id="name-input" required />
-    </label>
-    <button type="submit" value="like">Send</button>
-    <button type="submit" value="hate">Hate Send</button>
-  </form>
-
-  <p id="response"></p>
-
+  <div class="glass-container">
+    <h1>AJAX / fetch demo</h1>
+    <form id="greet-form">
+      <label for="name-input">Your name:</label>
+      <input type="text" id="name-input" required autocomplete="off" />
+      <div class="button-row">
+        <button type="submit" value="like">Send</button>
+        <button type="submit" value="hate">Hate Send</button>
+      </div>
+    </form>
+    <div id="spinner" class="spinner" style="display:none;"></div>
+    <div id="response" class="response-box"></div>
+    <div id="history-container">
+      <h2>Greeting History</h2>
+      <ul id="history-list"></ul>
+    </div>
+  </div>
   <script src="app.js"></script>
 </body>
 </html>
